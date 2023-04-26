@@ -60,14 +60,9 @@ router.get('/:id', async (req, res) => {
 //     console.log(err);
 //     res.status(400).json(err);
 // }
-/* req.body should look like this...
-  {
-    product_name: "Basketball",
-    price: 200.00,
-    stock: 3,
-    tagIds: [1, 2, 3, 4]
-  }
-*/
+//req.body should look like this...
+ 
+
 router.post('/', (req, res) => {
   Product.create(req.body)
     .then((product) => {
@@ -131,7 +126,7 @@ router.put('/:id', (req, res) => {
     })
     .then((updatedProductTags) => res.json(updatedProductTags))
     .catch((err) => {
-      // console.log(err);
+      console.log(err);
       res.status(400).json(err);
     });
 });

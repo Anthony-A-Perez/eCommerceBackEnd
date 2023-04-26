@@ -90,7 +90,7 @@ router.delete('/:id', async (req, res) => {
         id: req.params.id
       }
     })
-    res.status(200).json(tags)
+    res.status(200).json(deleteTag)
   } catch (err) {
     res.status(500).json(err)
   }
